@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -19,6 +20,12 @@ const services = [
 ];
 
 export const Homepage = (): JSX.Element => {
+  const [isImageExpanded, setIsImageExpanded] = useState(false);
+
+  const handleImageClick = () => {
+    setIsImageExpanded(!isImageExpanded);
+  };
+
   return (
     <div className="flex min-h-screen items-start relative bg-[#0a0419]">
       <div className="flex flex-col items-start relative flex-1 self-stretch grow overflow-hidden overflow-y-scroll">
@@ -99,9 +106,14 @@ export const Homepage = (): JSX.Element => {
 
       <aside className="flex flex-col items-start justify-center relative flex-1 self-stretch grow">
         <img
-          className="fixed top-0 right-0 w-1/2 h-[50vh] object-cover z-10"
+          className={`fixed top-0 right-0 object-cover z-10 transition-all duration-500 ease-in-out cursor-[url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>'),_auto] ${
+            isImageExpanded 
+              ? 'w-screen h-screen' 
+              : 'w-1/2 h-[50vh]'
+          }`}
           alt="Row"
           src="/row.svg"
+          onClick={handleImageClick}
         />
 
         <div className="flex flex-col items-center justify-center gap-12 px-32 py-16 bg-[#150f22] relative flex-1 self-stretch w-full grow">
