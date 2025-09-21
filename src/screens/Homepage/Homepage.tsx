@@ -117,7 +117,7 @@ export const Homepage = (): JSX.Element => {
         />
 
         <div className="flex flex-col items-center justify-center gap-12 px-32 py-16 bg-[#150f22] relative flex-1 self-stretch w-full grow">
-        <div className="fixed bottom-0 right-0 w-1/2 h-[50vh] flex flex-col items-center justify-center gap-12 px-32 py-16 bg-[#150f22] z-20">
+        <div className={`fixed bottom-0 right-0 w-1/2 h-[50vh] flex flex-col items-center justify-center gap-12 px-32 py-16 bg-[#150f22] z-20 ${isImageExpanded ? 'opacity-0 pointer-events-none' : 'opacity-100'} transition-opacity duration-500`}>
           <Button
             asChild
             className="inline-flex items-center justify-center gap-2.5 px-16 py-4 relative flex-[0_0_auto] bg-[#0a0419] rounded-[1000px] h-auto hover:bg-[#0a0419]/80"
