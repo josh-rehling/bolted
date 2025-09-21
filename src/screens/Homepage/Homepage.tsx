@@ -108,8 +108,8 @@ export const Homepage = (): JSX.Element => {
         <img
           className={`fixed top-0 right-0 object-cover z-10 transition-all duration-500 ease-in-out cursor-[url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>'),_auto] ${
             isImageExpanded 
-              ? 'w-screen h-screen z-[9999] opacity-100' 
-              : 'w-1/2 h-[50vh] z-10 opacity-50'
+              ? 'w-screen h-screen z-[9999]' 
+              : 'w-1/2 h-[50vh] z-10'
           }`}
           alt="Row"
           src="/row.svg"
