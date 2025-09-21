@@ -29,7 +29,7 @@ export const Homepage = (): JSX.Element => {
   return (
     <div className="flex min-h-screen items-start relative bg-[#0a0419]">
       <div className="flex flex-col items-start relative flex-1 self-stretch grow overflow-hidden overflow-y-scroll">
-        <div className="flex flex-col items-start gap-20 px-20 py-0 relative self-stretch w-full min-h-screen">
+        <div className={`flex flex-col items-start gap-20 px-20 py-0 relative self-stretch w-full min-h-screen ${isImageExpanded ? 'opacity-0 pointer-events-none' : 'opacity-100'} transition-opacity duration-500`}>
           <header className="flex flex-col items-start pl-0 pr-20 pt-20 pb-40 relative self-stretch w-full flex-[0_0_auto] bg-transparent">
             <div className="relative w-[335px] h-[86px] [background:url(../logo.png)_50%_50%_/_cover]" />
           </header>
